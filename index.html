@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hüseyin – Matematik & Tasarım</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #020617;
+            color: #e5e7eb;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 32px;
+            border-bottom: 1px solid #111827;
+            background: rgba(2, 6, 23, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin-left: 24px;
+            font-size: 14px;
+            color: #e5e7eb;
+        }
+
+        nav a:hover { color: #38bdf8; }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px 16px 64px;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            background: radial-gradient(circle at top left,#22d3ee,#1d4ed8);
+            border-radius: 24px;
+            padding: 50px 32px 40px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content:"";
+            position:absolute;
+            inset:0;
+            background: radial-gradient(circle at bottom right,rgba(15,23,42,0.4),transparent);
+            pointer-events:none;
+        }
+
+        .hero-top {
+            position:absolute;
+            top:12px;
+            left:50%;
+            transform:translateX(-50%);
+            font-size:12px;
+            opacity:0.9;
+            color:white;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            margin: 6px 0 6px;
+            font-size: 30px;
+        }
+
+        .hero p {
+            margin: 4px 0;
+            font-size: 14px;
+        }
+
+        .hero-actions {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: #020617;
+            color: white;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(15,23,42,0.5);
+        }
+
+        /* KATEGORİLER / ARAÇLAR */
+        .section-block {
+            margin-top: 40px;
+        }
+
+        .section-block h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .cat-card {
+            border-radius: 18px;
+            padding: 16px;
+            background: #020617;
+            border: 1px solid #1f2937;
+            box-shadow: 0 10px 30px rgba(15,23,42,0.7);
+            transition: 0.15s;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-4px);
+            border-color: #38bdf8;
+        }
+
+        .cat-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .cat-desc {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MATHLAB</div>
+    <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="ayarlar.html">Ayarlar</a>
+</nav>
+
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <!-- ÜSTE ORTALANMIŞ © YAZI -->
+        <div class="hero-top">
+            © 2026 – Hüseyin'in Matematik Platformu
+        </div>
+
+        <div class="hero-content">
+            <h1>Matematik & Tasarım</h1>
+            <p>Burada sağlam matematik öğrenip tasarım gözünü geliştireceksin.</p>
+
+            <div class="hero-actions">
+                <a href="konular.html" class="btn btn-primary">MATEMATİK</a>
+                <a href="cozumler.html" class="btn btn-ghost">TASARIM</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAŞLANGIÇ KONULARI (Uygulamadaki büyük kategoriler) -->
+    <section class="section-block">
+        <h2>Başlangıç Konuları</h2>
+
+        <div class="cat-grid">
+            <a class="cat-card" href="ucgenler.html">
+                <div class="cat-title">Geometri</div>
+                <div class="cat-desc">Üçgen, dörtgenler, daire, cisimler…</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">Cebir</div>
+                <div class="cat-desc">Denklemler, eşitsizlikler, ifadeler.</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">Trigonometri</div>
+                <div class="cat-desc">Sinüs, kosinüs, tanjant…</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">Denklemler</div>
+                <div class="cat-desc">1. ve 2. dereceden denklemler.</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">Analitik Geometri</div>
+                <div class="cat-desc">Koordinat, doğru, paraboller.</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">Türev</div>
+                <div class="cat-desc">Değişim oranı, grafik yorumları.</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">İntegrasyon</div>
+                <div class="cat-desc">Alan, hacim ve ters türev.</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">Matrisler</div>
+                <div class="cat-desc">Determinant, ters matris, işlemler.</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">İstatistik</div>
+                <div class="cat-desc">Grafik, ortalama, medyan.</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">Birim Dönüşümü</div>
+                <div class="cat-desc">Uzunluk, alan, hacim birimleri.</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">Matematik Hileleri</div>
+                <div class="cat-desc">Kısa yollar, pratik hesaplar.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ARAÇLAR (3. fotodaki alt bölüm) -->
+    <section class="section-block">
+        <h2>Araçlar</h2>
+
+        <div class="cat-grid">
+            <a class="cat-card" href="#">
+                <div class="cat-title">Birim Dönüşümü</div>
+                <div class="cat-desc">Uzunluk, alan, hacim, açı…</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">2D Şekil Hesaplayıcı</div>
+                <div class="cat-desc">Dikdörtgen, daire, üçgen alan/çevre.</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">3D Şekil Hesaplayıcı</div>
+                <div class="cat-desc">Küp, silindir, koni, prizma hacimleri.</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">Denklem Çözücü</div>
+                <div class="cat-desc">1. ve 2. dereceden denklemler için yardımcı.</div>
+            </a>
+
+            <a class="cat-card" href="#">
+                <div class="cat-title">Analitik Geometri Aracı</div>
+                <div class="cat-desc">Nokta, doğru, uzaklık hesapları.</div>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
